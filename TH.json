@@ -1,0 +1,49 @@
+{
+  "country": "TH",
+  "generatedAt": "2026-02-12T00:00:00.000Z",
+  "groups": [
+    {
+      "admin1": "TH-10",
+      "admin1Name": "Bangkok",
+      "cities": [
+        { "name": "Bangkok", "lat": 13.7563, "lon": 100.5018 }
+      ]
+    },
+    {
+      "admin1": "TH-50",
+      "admin1Name": "Chiang Mai",
+      "cities": [
+        { "name": "Chiang Mai", "lat": 18.7883, "lon": 98.9853 }
+      ]
+    },
+    {
+      "admin1": "TH-83",
+      "admin1Name": "Phuket",
+      "cities": [
+        { "name": "Phuket", "lat": 7.8804, "lon": 98.3923 }
+      ]
+    },
+    {
+      "admin1": "TH-90",
+      "admin1Name": "Songkhla",
+      "cities": [
+        { "name": "Hat Yai", "lat": 7.0084, "lon": 100.4767 },
+        { "name": "Songkhla", "lat": 7.1988, "lon": 100.5951 }
+      ]
+    },
+    {
+      "admin1": "TH-40",
+      "admin1Name": "Khon Kaen",
+      "cities": [
+        { "name": "Khon Kaen", "lat": 16.4419, "lon": 102.8350 }
+      ]
+    },
+    {
+      "admin1": "TH-20",
+      "admin1Name": "Chonburi",
+      "cities": [
+        { "name": "Pattaya (Chonburi)", "lat": 12.9236, "lon": 100.8825 }
+      ]
+    }
+  ]
+}

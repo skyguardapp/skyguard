@@ -1,0 +1,57 @@
+{
+  "country": "MM",
+  "generatedAt": "2026-02-12T00:00:00.000Z",
+  "groups": [
+    {
+      "admin1": "MM-YGN",
+      "admin1Name": "Yangon Region",
+      "cities": [
+        { "name": "Yangon (ရန်ကုန်)", "lat": 16.8409, "lon": 96.1735 }
+      ]
+    },
+    {
+      "admin1": "MM-NPT",
+      "admin1Name": "Nay Pyi Taw Union Territory",
+      "cities": [
+        { "name": "Nay Pyi Taw (နေပြည်တော်)", "lat": 19.7633, "lon": 96.0785 }
+      ]
+    },
+    {
+      "admin1": "MM-MDY",
+      "admin1Name": "Mandalay Region",
+      "cities": [
+        { "name": "Mandalay (မန္တလေး)", "lat": 21.9588, "lon": 96.0891 }
+      ]
+    },
+    {
+      "admin1": "MM-MGY",
+      "admin1Name": "Magway Region",
+      "cities": [
+        { "name": "Magway (မကွေး)", "lat": 20.1496, "lon": 94.9320 }
+      ]
+    },
+    {
+      "admin1": "MM-BGO",
+      "admin1Name": "Bago Region",
+      "cities": [
+        { "name": "Bago (ပဲခူး)", "lat": 17.3369, "lon": 96.4797 }
+      ]
+    },
+    {
+      "admin1": "MM-KYN",
+      "admin1Name": "Kayin State",
+      "cities": [
+        { "name": "Hpa-An (ဘားအံ)", "lat": 16.8896, "lon": 97.6348 },
+        { "name": "Myawaddy (မြဝတီ)", "lat": 16.6903, "lon": 98.5078 }
+      ]
+    },
+    {
+      "admin1": "MM-SHN",
+      "admin1Name": "Shan State",
+      "cities": [
+        { "name": "Lashio (လားရှိုး)", "lat": 22.9359, "lon": 97.7498 },
+        { "name": "Nawnghkio (နောင်ချို)", "lat": 22.3220, "lon": 96.7990 }
+      ]
+    }
+  ]
+}

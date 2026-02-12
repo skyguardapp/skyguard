@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>MM-TH Early Warning</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="wrap">
+    <div class="brand">
+      <div class="logo">⚠️</div>
+      <div>
+        <h1 id="t_title">MM-TH Early Warning</h1>
+        <p class="sub" id="t_sub">Myanmar & Thailand — Weather + Earthquake (Installable)</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label class="field">
+        <span id="t_lang">Language</span>
+        <select id="lang">
+          <option value="en" selected>English</option>
+          <option value="my">မြန်မာ</option>
+          <option value="th">ไทย</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span id="t_country">Country</span>
+        <select id="country">
+          <option value="MM" selected>Myanmar</option>
+          <option value="TH">Thailand</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span id="t_state">State/Region</span>
+        <select id="admin1"></select>
+      </label>
+
+      <label class="field">
+        <span id="t_city">City/Town</span>
+        <select id="city"></select>
+      </label>
+
+      <button id="refresh" class="btn">Refresh</button>
+      <button id="testSound" class="btn ghost">Test Sound</button>
+    </div>
+
+    <div class="badges">
+      <span class="badge">Earthquakes: USGS</span>
+      <span class="badge">Weather: Open-Meteo</span>
+      <span class="badge" id="t_noKey">No API Key</span>
+      <span class="badge" id="t_installTip">Install on iOS/Android (PWA)</span>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card">
+      <div class="cardHead">
+        <h2 id="t_quakes">🌍 Earthquakes (Nearby)</h2>
+        <div class="meta" id="quakeMeta">—</div>
+      </div>
+
+      <div class="status" id="quakeStatus" aria-live="polite"></div>
+      <div class="list" id="quakeList"></div>
+
+      <details class="footnote">
+        <summary id="t_disclaimer">Disclaimer</summary>
+        <p id="t_disclaimerBody">
+          This is NOT an official warning system. Data comes from public sources. Always follow local authorities.
+        </p>
+      </details>
+    </section>
+
+    <section class="card">
+      <div class="cardHead">
+        <h2 id="t_weather">🌦 Weather (Selected City)</h2>
+        <div class="meta" id="wxMeta">—</div>
+      </div>
+
+      <div class="status" id="wxStatus" aria-live="polite"></div>
+
+      <div class="wxGrid">
+        <div class="wxBox">
+          <div class="wxLabel" id="t_temp">Temperature</div>
+          <div class="wxValue" id="wxTemp">—</div>
+        </div>
+        <div class="wxBox">
+          <div class="wxLabel" id="t_rain">Rain (current hour)</div>
+          <div class="wxValue" id="wxRain">—</div>
+        </div>
+        <div class="wxBox">
+          <div class="wxLabel" id="t_wind">Wind</div>
+          <div class="wxValue" id="wxWind">—</div>
+        </div>
+        <div class="wxBox">
+          <div class="wxLabel" id="t_condition">Condition</div>
+          <div class="wxValue" id="wxCode">—</div>
+        </div>
+      </div>
+
+      <div class="small" id="t_alertRules">
+        Alerts (sound): Very hot OR heavy rain OR new quake nearby (while app is open).
+      </div>
+
+      <div class="small">
+        <strong id="t_thresholds">Thresholds</strong>:
+        <span class="mono" id="thresholdText"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span id="year"></span> MM-TH Early Warning</span>
+    <span class="sep">•</span>
+    <span id="lastUpdated">Last updated: —</span>
+  </footer>
+
+  <audio id="alertSound" preload="auto">
+    <!-- Simple short beep (base64 wav) -->
+    <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAAA=" type="audio/wav">
+  </audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
